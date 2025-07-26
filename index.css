@@ -1,0 +1,179 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 60px 20px 30px;
+    background-color: #f1c40f;
+    color: #000;
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.card-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.balance-card {
+    background-color: #111;
+    padding: 40px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    border: 2px solid #f1c40f;
+}
+
+.balance {
+    font-size: 36px;
+    color: #2ecc71;
+    margin: 10px 0 30px;
+}
+
+.input-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+
+button {
+    background-color: #f1c40f;
+    color: #000;
+    border: none;
+    padding: 10px 16px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #d4ac0d;
+}
+
+.break-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.break-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.btn-icon {
+    height: 100%;
+    border-radius: 4px;
+}
+
+.transactions {
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.transactions h3 {
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+#transactionList {
+    list-style: none;
+    padding: 0;
+}
+
+#transactionList li {
+    background-color: #222;
+    border: 1px solid #444;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.broken-section {
+    text-align: center;
+    padding: 40px;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+.custom-popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f1c40f;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeInOut 2.5s ease;
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .balance-card {
+        padding: 20px;
+    }
+
+    .input-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="number"] {
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .header h1 {
+        font-size: 40px;
+    }
+
+    .balance-card {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .header h1 {
+        font-size: 48px;
+    }
+}
