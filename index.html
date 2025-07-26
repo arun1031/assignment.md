@@ -7,46 +7,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6eM9F4J/1w1DeH5x9HfYI1QQ7gO5QnQy5YlqK3sN5sY+" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css" />
-   <script src="index.js"></script>
+  <!-- ✅ Updated script loading with defer -->
+  <script src="index.js" defer></script>
 </head>
 
-
 <body>
-     
-    <div class="header">
-        <h1>AgentWare Piggy Bank</h1>
-        <p class="subtitle">Save it. Break it. Use it.</p>
+  <div class="header">
+    <h1>AgentWare Piggy Bank</h1>
+    <p class="subtitle">Save it. Break it. Use it.</p>
+  </div>
+
+  <div class="card-box">
+    <div class="balance-card">
+      <h2>💰 Balance</h2>
+      <p class="balance">₹<span id="balance">0</span></p>
+
+      <div class="input-actions">
+        <input type="number" class="form-control" id="amountInput" placeholder="Enter amount" />
+        <button onclick="addMoney()">➕ Add Money</button>
+      </div>
+
+      <div class="break-section">
+        <button class="break-btn" onclick="breakPiggyBank()">
+          <img src="https://static.vecteezy.com/system/resources/previews/020/045/421/non_2x/isolate-blue-and-white-broken-piggy-bank-icon-financial-icon-vector.jpg" alt="Broken Piggy Bank" class="btn-icon" />
+          Break Piggy Bank
+        </button>
+      </div>
     </div>
+  </div>
 
-    <div class="card-box">
-        <div class="balance-card">
-            <h2>💰 Balance</h2>
-            <p class="balance">₹<span id="balance">0</span></p>
+  <div class="transactions">
+    <h3>📋 Transactions</h3>
+    <ul id="transactionList"></ul>
+  </div>
 
-            <div class="input-actions">
-                <input type="number" class="form-control" id="amountInput" placeholder="Enter amount" />
-                <button onclick="addMoney()">➕ Add Money</button>
-            </div>
-
-            <div class="break-section">
-                <button class="break-btn" onclick="breakPiggyBank()">
-                    <img src="https://static.vecteezy.com/system/resources/previews/020/045/421/non_2x/isolate-blue-and-white-broken-piggy-bank-icon-financial-icon-vector.jpg" alt="Broken Piggy Bank" class="btn-icon" />
-                    Break Piggy Bank
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="transactions">
-        <h3>📋 Transactions</h3>
-        <ul id="transactionList"></ul>
-    </div>
-
-    <div id="broken-section" class="broken-section hidden">
-        <h3>💥 Piggy Bank Broken!</h3>
-        <p>You withdrew ₹<span id="withdrawnAmount">0</span></p>
-        <button onclick="startNewPiggyBank()">🆕 Start New Piggy Bank</button>
-    </div>
+  <div id="broken-section" class="broken-section hidden">
+    <h3>💥 Piggy Bank Broken!</h3>
+    <p>You withdrew ₹<span id="withdrawnAmount">0</span></p>
+    <button onclick="startNewPiggyBank()">🆕 Start New Piggy Bank</button>
+  </div>
 </body>
 
 </html>
